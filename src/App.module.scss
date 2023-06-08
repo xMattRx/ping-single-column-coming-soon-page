@@ -3,6 +3,7 @@
     align-items: center;
     flex-direction: column;
     height: 100vh;
+    margin: 30px;
 
     @media only screen and (max-width: 655px) {
         height: 100%;
@@ -27,6 +28,11 @@
             font-size: 40px;
             font-weight: 300;
             margin-bottom: 10px;
+
+            @media only screen and (max-width: 630px) {
+                font-size: 25px;
+                margin-bottom: 20px;
+            }
         }
 
         h2 span {
@@ -37,19 +43,75 @@
         h3 {
             font-weight: 300;
             margin-bottom: 30px;
+            @media only screen and (max-width: 630px) {
+               font-size: 13px;
+            }
         }
 
         form {
             display: flex;
             gap: 12px;
             margin-bottom: 70px;
+            position: relative;
+            width: max-content;
 
-            input[type="email"] {
+            @media only screen and (max-width: 630px) {
+                flex-direction: column;
+                gap: 7px;
+            }
+
+            .alertOff {
+                color: hsl(354, 100%, 66%);
+                display: none;
+                font-size: 12px;
+                position: absolute;
+                left: 26px;
+                top: 50px;
+            }
+
+            .alertOn {
+                color: hsl(354, 100%, 66%);
+                display: block;
+            }
+
+            .alertOn,
+            .alertOff {
+                font-size: 12px;
+                position: absolute;
+                left: 26px;
+                top: 50px;
+
+                @media only screen and (max-width: 630px) {
+                    position: static;
+                    margin-bottom: 20px;
+                }
+
+            }
+
+            .emailOff,
+            .emailOn {
                 border-radius: 50px;
-                border: 1px solid #a8a8a870;
+                line-height: 44px;
                 outline: none;
                 padding-left: 25px;
                 padding-right: 145px;
+
+                @media only screen and (max-width: 630px) {
+                    padding-left: 25px;
+                    padding-right: 90px;
+                }
+            }
+
+            .emailOff {
+                border: 1px solid #a8a8a870;
+
+                &::placeholder {
+                    color: #a8a8a870;
+                }
+            }
+
+            .emailOn {
+                border: 1px solid hsl(354, 100%, 66%);
 
                 &::placeholder {
                     color: #a8a8a870;
@@ -76,7 +138,8 @@
         }
 
         img {
-            width: 560px;
+            max-width: 560px;
+            width: 100%;
         }
     }
 
