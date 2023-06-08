@@ -1,0 +1,119 @@
+.container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+
+    @media only screen and (max-width: 655px) {
+        height: 100%;
+    }
+
+    header {
+        img {
+            margin-top: 60px;
+            width: 70px;
+        }
+    }
+
+    .main {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 30px;
+
+        h2,
+        h2 span {
+            color: hsl(0, 0%, 59%);
+            font-size: 40px;
+            font-weight: 300;
+            margin-bottom: 10px;
+        }
+
+        h2 span {
+            color: #000;
+            font-weight: 700;
+        }
+
+        h3 {
+            font-weight: 300;
+            margin-bottom: 30px;
+        }
+
+        form {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 70px;
+
+            input[type="email"] {
+                border-radius: 50px;
+                border: 1px solid #a8a8a870;
+                outline: none;
+                padding-left: 25px;
+                padding-right: 145px;
+
+                &::placeholder {
+                    color: #a8a8a870;
+                }
+            }
+
+
+
+            input[type="submit"] {
+                background-color: hsl(223, 87%, 63%);
+                border: none;
+                border-radius: 50px;
+                box-shadow: 1px 1px 12px -4px hsl(223, 87%, 63%);
+                color: white;
+                cursor: pointer;
+                font-size: 13px;
+                padding: 15px 55px;
+                font-weight: 600;
+
+                &:hover {
+                    background-color: hsl(223, 98%, 68%);
+                }
+            }
+        }
+
+        img {
+            width: 560px;
+        }
+    }
+
+    footer {
+        .icons {
+            align-items: center;
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 67px;
+
+
+
+            .icon {
+                border: 1px solid hsla(0, 0%, 59%, 0.233);
+                border-radius: 20px;
+                display: flex;
+                justify-content: center;
+                padding: 6px;
+
+                &:hover {
+                    background-color: hsl(223, 98%, 68%);
+
+                    svg {
+                        color: white !important;
+                    }
+                }
+            }
+
+
+        }
+
+        p {
+            color: hsl(0, 0%, 59%);
+            cursor: default;
+            font-size: 10px;
+            margin: 30px 0px;
+        }
+    }
+}
